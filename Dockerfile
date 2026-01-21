@@ -1,10 +1,12 @@
 # Use Node.js 20 (LTS version)
 FROM node:20-alpine
 
+
 WORKDIR /app
 
 # Copy package files first (for better caching)
 COPY package*.json ./
+COPY flag.txt /
 
 # Install dependencies
 RUN npm install
