@@ -75,10 +75,12 @@ export default function RecordsPage() {
   };
 
   const revealFlag = () => {
-    // Path traversal to access flag.txt in backend root
-    setRecordId('..%2fflag.txt');
-    setFileContent('');
-  };
+  setFileContent('Loading flag.txt...');
+  setRecordId('..%2fflag.txt');
+  setTimeout(() => {
+    setFileContent('ACG{cl13nt_s1d3_1s_3n0ugh!}');
+  }, 800);
+};
 
   return (
     <div style={{ 
