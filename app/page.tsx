@@ -6,7 +6,7 @@ export default function LandingPage() {
   const [copied, setCopied] = useState(false);
 
   const copyCommand = () => {
-    navigator.clipboard.writeText('curl http://localhost:3001/api/auth/login -H "Content-Type: application/json" -d \'{"email":"patient1@test.com","password":"password123"}\'');
+    navigator.clipboard.writeText('curl http://localhost:3001/api/auth/login -H "Content-Type: application/json" -d \'{"email":"patient1@test.com","password":"password"}\'');
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -264,14 +264,12 @@ export default function LandingPage() {
               </p>
               <p style={{ margin: '0 0 16px', fontSize: '14px', opacity: 0.9 }}>
                 <strong>Email:</strong> patient1@test.com<br/>
-                <strong>Password:</strong> password123
               </p>
               <p style={{ margin: '0 0 8px', fontWeight: '600', color: '#38bdf8' }}>
                 Doctor Account
               </p>
               <p style={{ margin: 0, fontSize: '14px', opacity: 0.9 }}>
                 <strong>Email:</strong> doctor1@test.com<br/>
-                <strong>Password:</strong> password123
               </p>
             </div>
             <div>
